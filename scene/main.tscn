@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://n0h60x7a3824"]
+
+[ext_resource type="PackedScene" uid="uid://do7k1o6ai6tov" path="res://Assets/terrain/floor_est.glb" id="2_v0l8b"]
+[ext_resource type="PackedScene" uid="uid://xvfx8t7h43c4" path="res://scene/character_body_3d.tscn" id="2_wp4xf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_itxqv"]
+
+[node name="main" type="Node3D" unique_id=1517800344]
+
+[node name="CharacterBody3D" parent="." unique_id=601443601 instance=ExtResource("2_wp4xf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2265485, 0, -0.14457941)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2127583556]
+transform = Transform3D(5.5882936, 0, 0, 0, 2.3026175, 0, 0, 0, 1, 0, 1.9275355, -3.1095061)
+mesh = SubResource("BoxMesh_itxqv")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1227199268]
+transform = Transform3D(1, 0, 0, 0, 0.03148055, 0.9995044, 0, -0.9995044, 0.03148055, 0, 8.754578, 0)
+light_color = Color(1, 1, 0.34509805, 1)
+light_energy = 1000.0
+spot_range = 19.60172
+spot_angle = 71.2395
+
+[node name="floor_est" parent="." unique_id=1755290072 instance=ExtResource("2_v0l8b")]
+transform = Transform3D(5.0524836, 0, 0, 0, 1, 0, 0, 0, 4.408493, -1.3791509, 0, 0.10692358)

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dxb1tr2yua8u6"]
+
+[ext_resource type="PackedScene" uid="uid://85rueg3cxsih" path="res://Assets/character/stupidcharacter.glb" id="1_5olrt"]
+
+[node name="stupidcharacter" unique_id=2099265539 instance=ExtResource("1_5olrt")]
