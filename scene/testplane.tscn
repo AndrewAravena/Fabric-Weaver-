@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://wel4glsqtysn"]
+
+[ext_resource type="PackedScene" uid="uid://w0fy1d35p6s7" path="res://Assets/terrain/Untitled.glb" id="1_ip0ay"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dtakd"]
+
+[node name="Untitled" unique_id=824682517 instance=ExtResource("1_ip0ay")]
+
+[node name="Testplane" parent="." index="0" unique_id=1405798873]
+physics_material_override = SubResource("PhysicsMaterial_dtakd")

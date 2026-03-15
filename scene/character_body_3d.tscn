@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://dgg803jciva0g" path="res://Scripts/character_scripts/Character_movement.gd" id="1_jpykr"]
 [ext_resource type="PackedScene" uid="uid://85rueg3cxsih" path="res://Assets/character/stupidcharacter.glb" id="2_ie0n8"]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jpykr"]
+height = 2.4945068
+
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=601443601]
 script = ExtResource("1_jpykr")
 
@@ -17,3 +20,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.8, 0, 0, 0)
 
 [node name="stupidcharacter" parent="." unique_id=2099265539 instance=ExtResource("2_ie0n8")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0.001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1297288301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3424008, 0)
+shape = SubResource("CapsuleShape3D_jpykr")

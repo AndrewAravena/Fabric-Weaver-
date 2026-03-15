@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://duhiat61xoer5"]
+
+[ext_resource type="PackedScene" uid="uid://e6iml2wc5fp6" path="res://Assets/terrain/TestPlane.glb" id="1_5emu5"]
+
+[node name="TestPlane" unique_id=441078859 instance=ExtResource("1_5emu5")]

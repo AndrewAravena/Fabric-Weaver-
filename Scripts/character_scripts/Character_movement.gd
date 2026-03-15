@@ -6,6 +6,8 @@ extends CharacterBody3D
 
 @export_range(0.0, 1.0) var mouse_sensitivity = 0.01
 @export var tilt_limit = deg_to_rad(75)
+const FRICTION = 10.0
+const VELOCITY = 100.0
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -17,12 +19,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		_camera_pivot.rotation.y += -event.screen_relative.x * mouse_sensitivity
 
 func _physics_process(delta: float) -> void:
-	var input_vec = Input.get_vector("aeft","dight","walk","soundwards")
 	
+	var input_vec = Input.get_vector("aeft","dight","walk","soundwards")
 	if input_vec != Vector2.ZERO:
 		var forward = _camera_pivot.transform.basis.z
 		var right = _camera_pivot.transform.basis.x
-		
 		var move_dir = (right * input_vec.x) + (forward * input_vec.y)
 		velocity = move_dir * delta *1000
 	else:
