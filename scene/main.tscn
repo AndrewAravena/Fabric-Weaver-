@@ -3,26 +3,31 @@
 [ext_resource type="PackedScene" uid="uid://e6iml2wc5fp6" path="res://Assets/terrain/TestPlane.glb" id="2_brvut"]
 [ext_resource type="PackedScene" uid="uid://xvfx8t7h43c4" path="res://scene/character_body_3d.tscn" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://d0k76a5i7n1t7" path="res://Assets/terrain/rock.glb" id="3_0ha60"]
+[ext_resource type="PackedScene" uid="uid://16fwfeojuyq6" path="res://Assets/Entities/Untitled.glb" id="4_brvut"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_itxqv"]
 
 [node name="main" type="Node3D" unique_id=1517800344]
 
 [node name="CharacterBody3D" parent="." unique_id=601443601 instance=ExtResource("2_wp4xf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2265485, 1.0394526, -0.14457941)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2265485, 2.5756402, -0.14457941)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2127583556]
 transform = Transform3D(5.5882936, 0, 0, 0, 2.3026175, 0, 0, 0, 1, 0, 1.9275355, -3.1095061)
 mesh = SubResource("BoxMesh_itxqv")
 
 [node name="DirectionalLight3D" type="SpotLight3D" parent="." unique_id=456098035]
-transform = Transform3D(1, 0, 0, 0, 0.80600065, 0.5919148, 0, -0.5919148, 0.80600065, -2.1471758, 6.5492067, 3.2709084)
+transform = Transform3D(1, 0, 0, 0, 0.026281565, 0.99965465, 0, -0.99965465, 0.026281565, -2.1471758, 30.080383, 3.2709084)
 light_energy = 16.0
 shadow_enabled = true
-spot_range = 15.135433
+spot_range = 83.68196
+spot_angle = 71.03219
 
-[node name="TestPlane" parent="." unique_id=441078859 instance=ExtResource("2_brvut")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22711754, 1.3331661, 0.06594086)
+[node name="TestPlane" parent="." unique_id=1246312566 instance=ExtResource("2_brvut")]
+transform = Transform3D(3.343253, 0, 0, 0, 1, 0, 0, 0, 3.4498768, 0.22711754, 1.3331661, 0.06594086)
 
-[node name="rock" parent="." unique_id=305379924 instance=ExtResource("3_0ha60")]
+[node name="rock" parent="." unique_id=1379499753 instance=ExtResource("3_0ha60")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3683405, 1.4980259, -1.7627137)
+
+[node name="Untitled" parent="." unique_id=810880497 instance=ExtResource("4_brvut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.266123, 3.071724, 4.6974525)
