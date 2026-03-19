@@ -18,10 +18,10 @@ mesh = SubResource("BoxMesh_itxqv")
 
 [node name="DirectionalLight3D" type="SpotLight3D" parent="." unique_id=456098035]
 transform = Transform3D(1, 0, 0, 0, 0.026281565, 0.99965465, 0, -0.99965465, 0.026281565, -2.1471758, 30.080383, 3.2709084)
-light_energy = 16.0
+light_energy = 20.0
 shadow_enabled = true
 spot_range = 83.68196
-spot_angle = 71.03219
+spot_angle = 89.99
 
 [node name="TestPlane" parent="." unique_id=1246312566 instance=ExtResource("2_brvut")]
 transform = Transform3D(3.343253, 0, 0, 0, 1, 0, 0, 0, 3.4498768, 0.22711754, 1.3331661, 0.06594086)
