@@ -1,13 +1,28 @@
 [gd_scene format=3 uid="uid://xvfx8t7h43c4"]
 
 [ext_resource type="Script" uid="uid://dgg803jciva0g" path="res://Scripts/character_scripts/Character_movement.gd" id="1_jpykr"]
-[ext_resource type="PackedScene" uid="uid://85rueg3cxsih" path="res://Assets/character/stupidcharacter.glb" id="2_ie0n8"]
+[ext_resource type="Script" uid="uid://bakgllxmyloa" path="res://Scripts/character_scripts/input.gd" id="2_jpykr"]
+[ext_resource type="Script" uid="uid://c1ebg48sgkc7r" path="res://Scripts/character_scripts/model.gd" id="3_ie0n8"]
+[ext_resource type="Script" uid="uid://cj3xd25vbngc" path="res://Scripts/character_scripts/Moves/Idle.gd" id="4_edw73"]
+[ext_resource type="Script" uid="uid://bhtn7qsab1c50" path="res://Scripts/character_scripts/Moves/run.gd" id="5_l5k4b"]
+[ext_resource type="Script" uid="uid://b7o4wnu7nyk8t" path="res://Scripts/character_scripts/Moves/jump.gd" id="6_l5k4b"]
+[ext_resource type="PackedScene" uid="uid://dpeab0jyu5csu" path="res://Scripts/X Bot.fbx" id="7_3y8pf"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5fi65"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jpykr"]
-height = 2.4945068
+radius = 0.48931885
+height = 2.1694489
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=601443601]
+[node name="player" type="CharacterBody3D" unique_id=601443601]
 script = ExtResource("1_jpykr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1981653217]
+mesh = SubResource("CapsuleMesh_5fi65")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1297288301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.030732393, 0)
+shape = SubResource("CapsuleShape3D_jpykr")
 
 [node name="CameraPivot" type="Node3D" parent="." unique_id=1818270382]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 2, 0)
@@ -18,9 +33,20 @@ spring_length = 3.0
 [node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=942817657]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.8, 0, 0, 0)
 
-[node name="stupidcharacter" parent="." unique_id=2099265539 instance=ExtResource("2_ie0n8")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0.001)
+[node name="input" type="Node" parent="." unique_id=1593820172]
+script = ExtResource("2_jpykr")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1297288301]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3424008, 0)
-shape = SubResource("CapsuleShape3D_jpykr")
+[node name="model" type="Node" parent="." unique_id=1307839743]
+script = ExtResource("3_ie0n8")
+
+[node name="idle" type="Node" parent="model" unique_id=776397378]
+script = ExtResource("4_edw73")
+
+[node name="run" type="Node" parent="model" unique_id=746577611]
+script = ExtResource("5_l5k4b")
+
+[node name="jump" type="Node" parent="model" unique_id=421177427]
+script = ExtResource("6_l5k4b")
+
+[node name="X Bot" parent="." unique_id=1396639417 instance=ExtResource("7_3y8pf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9790726, 0, -2.7080314)

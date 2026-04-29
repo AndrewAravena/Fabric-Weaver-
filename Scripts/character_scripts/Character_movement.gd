@@ -8,16 +8,14 @@ extends CharacterBody3D
 @export var tilt_limit = deg_to_rad(75)
 
 @export_group("movement")
-@export var move_speed := 10.0
-@export var acceleration := 50.0
-const FRICTION = 10.0
-const VELOCITY = 100.0
-const GRAVITY = -9.8
+@export var move_speed := 100.0
+@export var acceleration := 9.80
 
+@onready var model = $model as Player_Model
+@onready var input_gatherer = $input as input_gatherer
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
 
 func _unhandled_input(event: InputEvent) -> void:
 	
@@ -25,19 +23,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		_camera_pivot.rotation.x -= event.screen_relative.y * mouse_sensitivity
 		_camera_pivot.rotation.x = clampf(_camera_pivot.rotation.x, -tilt_limit, tilt_limit)
 		rotation.y += -event.screen_relative.x * mouse_sensitivity
-		
-		
+
 func _physics_process(delta: float) -> void:
-	var input_vec = Input.get_vector("aeft","dight","walk","soundwards")
-	var move_dir = (transform.basis * Vector3(input_vec.x, 0, input_vec.y)).normalized()
-	move_dir.y = 0.0
-	move_dir = move_dir.normalized()
-	velocity = velocity.move_toward(move_dir * move_speed , acceleration * delta)
+	var input = input_gatherer.gather_inputs()
+	model.update(input, delta)
 	
+	if Input.is_action_just_pressed("pause"):
+		get_tree().quit()
 	move_and_slide()
-
-
-		
-		
-	
-		
