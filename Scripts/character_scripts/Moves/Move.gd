@@ -4,7 +4,7 @@ class_name Move
 
 # all-move flags and variables here
 var player : CharacterBody3D
-
+var animation: String 
 
 static var moves_priority : Dictionary = {
 	"idle" : 1,

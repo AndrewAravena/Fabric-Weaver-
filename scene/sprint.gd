@@ -1,16 +1,15 @@
 extends Move
-class_name Run
+class_name sprint
 
 const SPEED = 5.0
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready() -> void:
-	animation = "run"
+	animation = "sprint"
+var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func check_relevance(input : InputPackage):
-	if input.actions[0] == "run":
+	if input.actions[0] == "sprint":
 		return "okay"
 	return input.actions[0]
 
