@@ -11,9 +11,3 @@ func check_relevance(input) -> String:
 	
 func on_enter_state():
 	player.velocity = Vector3.ZERO
-	
-	#if input.actions.has("jump"):
-		#return "jump"
-	#if input.input_direction != Vector2.ZERO:
-		#return "run"
-	#return "okay"

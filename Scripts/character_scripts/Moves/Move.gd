@@ -9,7 +9,8 @@ var animation: String
 static var moves_priority : Dictionary = {
 	"idle" : 1,
 	"run" : 2,
-	"jump" : 10  # be generous to not edit this to much when sprint, dash, crouch etc are added
+	"roll" : 3,
+	"jump" : 10  
 }
 
 

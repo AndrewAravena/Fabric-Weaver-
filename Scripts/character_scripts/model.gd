@@ -8,6 +8,7 @@ class_name Player_Model
 
 var current_move : Move
 
+
 @onready var moves = {
 	"idle" : $idle,
 	"run" : $run,
