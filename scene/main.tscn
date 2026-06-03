@@ -2,8 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://xvfx8t7h43c4" path="res://scene/character_body_3d.tscn" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://d0k76a5i7n1t7" path="res://Assets/terrain/rock.glb" id="3_0ha60"]
-[ext_resource type="PackedScene" uid="uid://duhiat61xoer5" path="res://scene/test_plane.tscn" id="4_0ha60"]
+[ext_resource type="PackedScene" uid="uid://dgxn7gonmptvm" path="res://Assets/Buildings/HighPoly_L1/Factory/HpolyFacCorner01.glb" id="4_0ha60"]
 [ext_resource type="PackedScene" uid="uid://16fwfeojuyq6" path="res://Assets/Entities/Untitled.glb" id="4_brvut"]
+[ext_resource type="PackedScene" uid="uid://cwvkvyre7sn1l" path="res://Assets/Buildings/HighPoly_L1/Factory/HpolyFacMid01.glb" id="4_k65ib"]
+[ext_resource type="PackedScene" uid="uid://dcovs56syureb" path="res://Assets/Buildings/HighPoly_L1/Factory/HpolyFacWall01.glb" id="6_wscrc"]
+[ext_resource type="PackedScene" uid="uid://bpchlmesv6lt0" path="res://Assets/Buildings/HighPoly_L1/Factory/HpolyFacWallDoor01.glb" id="7_mswub"]
+[ext_resource type="PackedScene" uid="uid://cxxxf1qqlijgi" path="res://Assets/Buildings/HighPoly_L1/Factory/HpolyFacWallGDoor01.glb" id="8_hybxs"]
+[ext_resource type="PackedScene" uid="uid://3p4r0wbtvkuj" path="res://Assets/Buildings/HighPoly_L1/Hall/HpolyHall01.glb" id="9_v2gmf"]
+[ext_resource type="PackedScene" uid="uid://bu45c0hd20guw" path="res://Assets/Buildings/HighPoly_L1/Hall/HpolyHallDDoor01.glb" id="10_jcbur"]
+[ext_resource type="PackedScene" uid="uid://3fhdqhgxlk2n" path="res://Assets/Buildings/HighPoly_L1/Hall/HpolyHallEnd01.glb" id="11_smf0o"]
 
 [node name="main" type="Node3D" unique_id=1517800344]
 
@@ -20,10 +27,119 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3683405, 1.4980259, -1.762
 [node name="Untitled" parent="." unique_id=810880497 instance=ExtResource("4_brvut")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.266123, 3.071724, 4.6974525)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1396696165]
-transform = Transform3D(4.681019, 0, 0, 0, 1.0019952, -0.007579535, 0, 0.001381562, 5.497153, 0, 0, 0)
-use_collision = true
-size = Vector3(20, 1, 20)
+[node name="HpolyFacMid01" parent="." unique_id=785898822 instance=ExtResource("4_k65ib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
-[node name="TestPlane" parent="." unique_id=441078859 instance=ExtResource("4_0ha60")]
-transform = Transform3D(8.88, 0, 0, 0, 1, 0, 0, 0, 8.32, 7, 1, 1)
+[node name="HpolyFacMid02" parent="." unique_id=1004239823 instance=ExtResource("4_k65ib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
+
+[node name="HpolyFacMid03" parent="." unique_id=234580496 instance=ExtResource("4_k65ib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 8)
+
+[node name="HpolyFacMid04" parent="." unique_id=482543495 instance=ExtResource("4_k65ib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 4)
+
+[node name="HpolyFacMid05" parent="." unique_id=259091243 instance=ExtResource("4_k65ib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 8)
+
+[node name="HpolyFacMid06" parent="." unique_id=1035397914 instance=ExtResource("4_k65ib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="HpolyFacCorner02" parent="." unique_id=1364569659 instance=ExtResource("4_0ha60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -4)
+
+[node name="HpolyFacWall01" parent="." unique_id=1691047235 instance=ExtResource("6_wscrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -4)
+
+[node name="HpolyFacWall02" parent="." unique_id=409840194 instance=ExtResource("6_wscrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -4)
+
+[node name="HpolyFacWall03" parent="." unique_id=997838544 instance=ExtResource("6_wscrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -4)
+
+[node name="HpolyFacCorner03" parent="." unique_id=2125998988 instance=ExtResource("4_0ha60")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15, 0, -4)
+
+[node name="HpolyFacMid07" parent="." unique_id=995773569 instance=ExtResource("4_k65ib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 0)
+
+[node name="HpolyFacMid08" parent="." unique_id=40453503 instance=ExtResource("4_k65ib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 4)
+
+[node name="HpolyFacMid09" parent="." unique_id=609812990 instance=ExtResource("4_k65ib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 8)
+
+[node name="HpolyFacMid10" parent="." unique_id=8158676 instance=ExtResource("4_k65ib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 0)
+
+[node name="HpolyFacMid11" parent="." unique_id=1473245605 instance=ExtResource("4_k65ib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 4)
+
+[node name="HpolyFacMid12" parent="." unique_id=325847205 instance=ExtResource("4_k65ib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 8)
+
+[node name="HpolyFacWallDoor01" parent="." unique_id=492528986 instance=ExtResource("7_mswub")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15, 0, 0)
+
+[node name="HpolyFacWall04" parent="." unique_id=947717958 instance=ExtResource("6_wscrc")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15, 0, 4)
+
+[node name="HpolyFacWall05" parent="." unique_id=438839991 instance=ExtResource("6_wscrc")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15, 0, 8)
+
+[node name="HpolyFacWall06" parent="." unique_id=1823402918 instance=ExtResource("6_wscrc")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 5, 0, 4)
+
+[node name="HpolyFacWall07" parent="." unique_id=700670007 instance=ExtResource("6_wscrc")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 5, 0, 8)
+
+[node name="HpolyFacCorner04" parent="." unique_id=746287270 instance=ExtResource("4_0ha60")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 5, 0, 12)
+
+[node name="HpolyFacCorner01" parent="." unique_id=949920956 instance=ExtResource("4_0ha60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="HpolyFacWallGDoor01" parent="." unique_id=1688664500 instance=ExtResource("8_hybxs")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -11, 0, 12)
+
+[node name="HpolyFacCorner05" parent="." unique_id=1069952754 instance=ExtResource("4_0ha60")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -15, 0, 12)
+
+[node name="HpolyFacWall08" parent="." unique_id=1281894770 instance=ExtResource("6_wscrc")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -7, 0, 12)
+
+[node name="HpolyFacWall09" parent="." unique_id=1223834486 instance=ExtResource("6_wscrc")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1, 0, 12)
+
+[node name="HpolyFacWall10" parent="." unique_id=698728039 instance=ExtResource("6_wscrc")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3, 0, 12)
+
+[node name="HpolyHall01" parent="." unique_id=1192886303 instance=ExtResource("9_v2gmf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 16)
+
+[node name="HpolyHall02" parent="." unique_id=978417198 instance=ExtResource("9_v2gmf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 20)
+
+[node name="HpolyHall03" parent="." unique_id=908024485 instance=ExtResource("9_v2gmf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 24)
+
+[node name="HpolyHallDDoor01" parent="." unique_id=1321646010 instance=ExtResource("10_jcbur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 28)
+
+[node name="HpolyFacMid13" parent="." unique_id=2105671097 instance=ExtResource("4_k65ib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 28)
+
+[node name="HpolyFacMid14" parent="." unique_id=1134596084 instance=ExtResource("4_k65ib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 28)
+
+[node name="HpolyHallEnd01" parent="." unique_id=1322108289 instance=ExtResource("11_smf0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 32)
+
+[node name="HpolyHallEnd02" parent="." unique_id=1767593763 instance=ExtResource("11_smf0o")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -19, 0, 0)
+
+[node name="HpolyFacWall11" parent="." unique_id=518952784 instance=ExtResource("6_wscrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 24)
+
+[node name="HpolyFacWall12" parent="." unique_id=189929136 instance=ExtResource("6_wscrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 24)
