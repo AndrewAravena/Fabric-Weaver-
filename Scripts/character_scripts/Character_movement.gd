@@ -1,7 +1,6 @@
 extends CharacterBody3D
 
 @onready var _camera_pivot: Node3D = $CameraPivot
-@onready var _camera_3d: Camera3D = $CameraPivot/SpringArm3D/Camera3D
 @onready var character_body_3d: CharacterBody3D = $"."
 
 @export_range(0.0, 1.0) var mouse_sensitivity = 0.01
@@ -9,14 +8,15 @@ extends CharacterBody3D
 
 @onready var model = $model as Player_Model
 @onready var input_gatherer = $input as input_gatherer
-@onready var visuals: Node3D = $visuals as PlayerVisuals
+
+@onready var visuals: Node = $visuals as PlayerVisuals
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	visuals.accept_skeleton(model.skeleton)
+	visuals.accept_model(model)
 
 	
 func _unhandled_input(event: InputEvent) -> void:
@@ -30,9 +30,12 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	var input = input_gatherer.gather_inputs()
+	
 	model.update(input, delta)
-	print(velocity.z , ",", velocity.x , "," , velocity.y)
+	
 	print(input.actions)
+	
+	input.queue_free()
 	
 	if Input.is_action_just_pressed("pause"):
 		get_tree().quit()

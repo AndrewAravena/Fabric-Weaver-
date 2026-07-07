@@ -8,10 +8,14 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 
 func _ready() -> void:
-	animation = "run"
+	animation = "Run"
 
 
 func check_relevance(input : InputPackage):
+	if not player.is_on_floor():
+		return "midair"
+	
+	input.actions.sort_custom(moves_priority_sort)
 	if input.actions[0] == "run":
 		return "okay"
 	return input.actions[0]

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://jl6871gl0tlm"
-path="res://.godot/imported/xbot.fbx-ac2753100f1809b6f944ef6cd62909ae.scn"
+uid="uid://oxg58iy7pj0c"
+path="res://.godot/imported/Xbot.fbx-41af3cc5deb3da0d6b3fdf89714102dc.scn"
 
 [deps]
 
-source_file="res://Assets/character/xbot.fbx"
-dest_files=["res://.godot/imported/xbot.fbx-ac2753100f1809b6f944ef6cd62909ae.scn"]
+source_file="res://Assets/character/Xbot.fbx"
+dest_files=["res://.godot/imported/Xbot.fbx-41af3cc5deb3da0d6b3fdf89714102dc.scn"]
 
 [params]
 

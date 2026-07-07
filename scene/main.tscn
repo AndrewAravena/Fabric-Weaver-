@@ -17,7 +17,7 @@
 [node name="main" type="Node3D" unique_id=1517800344]
 
 [node name="CharacterBody3D" parent="." unique_id=601443601 instance=ExtResource("2_wp4xf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2265485, 1.9057665, -0.14457941)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2265485, 4.0057664, -0.14457941)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1744029980]
 transform = Transform3D(-0.82730615, -0.5615573, 0.014763702, -8.796419e-10, 0.026281567, 0.99965465, -0.56175125, 0.8270204, -0.0217429, -26.147175, 99.08038, 48.56581)

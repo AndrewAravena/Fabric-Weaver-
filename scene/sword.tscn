@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://draga6j1kom4s"]
+
+[ext_resource type="Script" uid="uid://chxj457emlrjk" path="res://Scripts/character_scripts/sword.gd" id="1_xhjsy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s3tpn"]
+radius = 0.13916016
+height = 1.7193604
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1103837540]
+script = ExtResource("1_xhjsy")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1804837846]
+transform = Transform3D(-0.13091734, 6.629798e-08, 0, -1.1445158e-08, -0.7583605, 0, 0, 0, 0.32465196, 0, 0, -0.009)
+size = Vector3(0.12864685, 0.1436615, 0.045654297)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1553350155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.813298, 0)
+shape = SubResource("CapsuleShape3D_s3tpn")
+disabled = true
