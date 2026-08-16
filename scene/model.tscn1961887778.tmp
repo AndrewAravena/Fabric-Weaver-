@@ -9,17 +9,12 @@
 [ext_resource type="Script" uid="uid://bhtn7qsab1c50" path="res://Scripts/character_scripts/Moves/run.gd" id="4_e0s72"]
 [ext_resource type="Script" uid="uid://vyw7fofbdk4a" path="res://Scripts/character_scripts/Moves/jump_run.gd" id="5_aqe7k"]
 [ext_resource type="Script" uid="uid://b7o4wnu7nyk8t" path="res://Scripts/character_scripts/Moves/jump.gd" id="6_rxsox"]
-[ext_resource type="Script" uid="uid://bq7ytur3kmgmq" path="res://Scripts/character_scripts/midair.gd" id="7_ht3tf"]
+[ext_resource type="Script" uid="uid://bq7ytur3kmgmq" path="res://scene/midair.gd" id="7_ht3tf"]
 [ext_resource type="Script" uid="uid://c722aes2a034s" path="res://Scripts/character_scripts/ray_cast_3d.gd" id="7_o12be"]
 [ext_resource type="Script" uid="uid://cxqa614bl2m0n" path="res://Scripts/character_scripts/Moves/landing_run.gd" id="8_f2n7c"]
 [ext_resource type="Script" uid="uid://c1pr2i026ml6e" path="res://Scripts/character_scripts/Moves/landing_sprint.gd" id="9_e0s72"]
 [ext_resource type="Script" uid="uid://ckbqiy3tgbqls" path="res://Scripts/character_scripts/midair_action.gd" id="13_fqk6t"]
 [ext_resource type="Script" uid="uid://dh5uyd113p4jd" path="res://Scripts/character_scripts/air_slash.gd" id="14_05wj5"]
-[ext_resource type="Script" uid="uid://b2g7122n3up41" path="res://Scripts/character_scripts/slash_1.gd" id="15_ynxpy"]
-[ext_resource type="Script" uid="uid://dv3vphqts0p58" path="res://Scripts/character_scripts/consecutive_attack.gd" id="16_4cvjh"]
-[ext_resource type="Script" uid="uid://hvn4nj2ugq4m" path="res://Scripts/character_scripts/Directional_attack.gd" id="17_1okjb"]
-[ext_resource type="Script" uid="uid://ke71nj8p3ux2" path="res://Scripts/character_scripts/slash_2.gd" id="17_4cvjh"]
-[ext_resource type="Script" uid="uid://cmk4lo5r77wjm" path="res://Scripts/character_scripts/slash_3.gd" id="19_0qoax"]
 
 [sub_resource type="Animation" id="Animation_to427"]
 resource_name = "Armature|Falling"
@@ -5156,37 +5151,6 @@ script = ExtResource("13_fqk6t")
 
 [node name="air_slash" type="Node" parent="states" unique_id=673351446]
 script = ExtResource("14_05wj5")
-
-[node name="slash_1" type="Node" parent="states" unique_id=490680881]
-script = ExtResource("15_ynxpy")
-
-[node name="consecutiveAttack" type="Node" parent="states/slash_1" unique_id=1870402581]
-script = ExtResource("16_4cvjh")
-
-[node name="directionalAttack" type="Node" parent="states/slash_1" unique_id=1084767672]
-script = ExtResource("17_1okjb")
-panic_click_block = null
-primary_input = null
-next_attack = null
-required_direction = null
-direction_deadzone = null
-
-[node name="slash_2" type="Node" parent="states" unique_id=1130263911]
-script = ExtResource("17_4cvjh")
-
-[node name="consecutiveAttack" type="Node" parent="states/slash_2" unique_id=167215128]
-script = ExtResource("16_4cvjh")
-
-[node name="directionalAttack" type="Node" parent="states/slash_2" unique_id=1234597268]
-script = ExtResource("17_1okjb")
-panic_click_block = null
-primary_input = null
-next_attack = null
-required_direction = null
-direction_deadzone = null
-
-[node name="slash_3" type="Node" parent="states" unique_id=87876457]
-script = ExtResource("19_0qoax")
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=912082687]
 target_position = Vector3(0, -100, 0)

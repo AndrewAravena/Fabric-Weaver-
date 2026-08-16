@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="StateMachine" format=3 uid="uid://2h657cwb0rhc"]
+
+[ext_resource type="Script" uid="uid://bl5g046e8jcjq" path="res://addons/imjp94.yafsm/src/states/StateMachine.gd" id="1_uuv0i"]
+
+[resource]
+script = ExtResource("1_uuv0i")
+metadata/_custom_type_script = "uid://bl5g046e8jcjq"

@@ -21,7 +21,11 @@ var current_move : Move
 	"jump_run": $states/JumpRun,
 	"midair": $states/midair,
 	"landing_run":$states/LandingRun,
-	"landing_sprint":$states/LandingSprint
+	"landing_sprint":$states/LandingSprint,
+	"air_slash_1": $states/air_slash,
+	"slash_1": $states/slash_1 , 
+	"slash_2": $states/slash_2 , 
+	"slash_3": $states/slash_3,
 }
 
 

@@ -25,7 +25,8 @@ static var moves_priority : Dictionary = {
 	"landing_sprint" : 10,
 	"slash_1" : 15,
 	"slash_2" : 15,
-	"slash_3" :1510  
+	"slash_3" :15,
+	"air_slash_1": 15,  
 }
 
 
@@ -72,3 +73,11 @@ func works_between(start: float, finish: float)-> bool:
 	if progress >=start and progress <=finish:
 		return true
 	return false
+	
+func check_combos( input : InputPackage):
+	var avaliable_combos = get_children()
+	for combo : Combo in avaliable_combos:
+		if combo.is_triggered(input):
+			has_queued_move = true 
+			queued_move = combo.triggered_move
+			return
