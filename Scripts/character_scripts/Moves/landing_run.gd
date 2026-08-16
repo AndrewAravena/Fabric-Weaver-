@@ -11,7 +11,7 @@ func _ready():
 	move_name = "landing_run"
 
 
-func check_relevance(input : InputPackage):
+func default_lifecycle( input : InputPackage):
 	if works_longer_than(TRANSITION_TIMING):
 		input.actions.sort_custom(moves_priority_sort)
 		return input.actions[0]

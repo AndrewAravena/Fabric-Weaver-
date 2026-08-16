@@ -5,7 +5,7 @@ func _ready() -> void:
 	animation = "Tpose"
 	
 
-func check_relevance(input) -> String:
+func default_lifecycle( input : InputPackage) -> String:
 	input.actions.sort_custom(moves_priority_sort)
 	if not player.is_on_floor():
 		return "midair"

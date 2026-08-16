@@ -6,6 +6,7 @@ class_name player_combat
 static  var input_priority : Dictionary = { 
 	"light_attack_pressed" : 1, 
 	"heavy_attack_pressed" : 2, 
+	"heavy_attack_charged_pressed": 3, 
 	
 }
 

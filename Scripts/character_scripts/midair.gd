@@ -17,7 +17,7 @@ func _ready():
 	move_name = "midair"
 
 
-func check_relevance(_input : InputPackage):
+func default_lifecycle( input : InputPackage):
 	var floor_point = downcast.get_collision_point()
 	if root_attachment.global_position.distance_to(floor_point) < landing_height:
 		var xz_velocity = player.velocity
@@ -25,10 +25,10 @@ func check_relevance(_input : InputPackage):
 		if xz_velocity.length_squared() >= 10:
 			return "landing_sprint"
 		return "landing_run"
-	if not _input.actions.is_empty():
-		_input.actions.sort_custom(moves_priority_sort)
-		if _input.actions[0] != move_name and moves_priority[_input.actions[0]] > moves_priority[move_name]:
-			return _input.actions[0]
+	if not input.actions.is_empty():
+		input.actions.sort_custom(moves_priority_sort)
+		if input.actions[0] != move_name and moves_priority[input.actions[0]] > moves_priority[move_name]:
+			return input.actions[0]
 	return "okay"
 
 

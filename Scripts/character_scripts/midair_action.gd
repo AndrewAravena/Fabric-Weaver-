@@ -1,5 +1,5 @@
 extends Move
-class_name  NewMove
+class_name  egg
 #Redifine your class_name
 #Redefine your overriden parameters 
 func _ready() -> void:

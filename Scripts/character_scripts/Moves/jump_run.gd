@@ -15,7 +15,7 @@ func _ready() -> void:
 	move_name = "jump_run"
 
 #Implement a chechk relevance function
-func check_relevance(input : InputPackage):
+func default_lifecycle( input : InputPackage):
 	if works_longer_than(TRANSITIONAL_TIMING):
 		jumped = false 
 		return "midair"

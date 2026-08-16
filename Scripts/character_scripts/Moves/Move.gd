@@ -4,15 +4,14 @@ class_name Move
 
 # all-move flags and variables here
 var player : CharacterBody3D
-
 var animation: String 
-
 var enter_state_time: float 
-
 var move_name : String
 var has_queued_move : bool = false
-var queued_move : String = "none, drop error please"
+var queued_move : String = "none, drop error "
 
+var has_forced_move : bool = false
+var forced_move : String = 'none, drop error'
 
 static var moves_priority : Dictionary = {
 	"idle" : 1,
@@ -38,9 +37,23 @@ static func moves_priority_sort(a : String, b : String):
 
 
 func check_relevance(input : InputPackage) -> String:
-	print_debug("error, implement the check_relevance function on your state")
-	return "error, implement the check_relevance function on your state"
+	if has_forced_move:
+		has_forced_move = false
+		return forced_move
+	return default_lifecycle(input)
 
+
+func default_lifecycle( _input : InputPackage) -> String:
+	print_debug("error, implement default_lifecycle")
+	return "error, implement default_lifecycle"
+	
+
+func try_forced_move(new_forced_move : String ):
+	if not has_forced_move:
+		has_forced_move = true 
+		forced_move = new_forced_move
+	elif moves_priority[new_forced_move] >= moves_priority[forced_move]:
+		forced_move = new_forced_move
 
 func update(input : InputPackage, delta : float):
 	pass
@@ -81,3 +94,12 @@ func check_combos( input : InputPackage):
 			has_queued_move = true 
 			queued_move = combo.triggered_move
 			return
+			
+func form_hit_data(_weapon : Weapon) -> HitData:
+	return HitData.new()
+	
+
+func react_on_hit(hit: HitData):
+	try_forced_move("staggered")
+	hit.queue_free()
+	

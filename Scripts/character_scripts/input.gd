@@ -1,5 +1,8 @@
 extends Node
 class_name input_gatherer
+const HEAVY_CHARGE_THRESHOLD := 0.4
+var _heavy_press_time : float = -1.0
+
 
 func gather_inputs() -> InputPackage:
 	var new_input = InputPackage.new()
@@ -22,6 +25,14 @@ func gather_inputs() -> InputPackage:
 		
 	if Input.is_action_just_pressed("light_attack"):
 		new_input.combat_actions.append("light_attack_pressed")
+	
+	if Input.is_action_just_pressed("haevy_attack") and _heavy_press_time >=0:
+		var held = Time.get_unix_time_from_system() - _heavy_press_time
+		_heavy_press_time = -1.0
+		if held >= HEAVY_CHARGE_THRESHOLD:
+			new_input.combat_actions.append("heav_attack_charged_pressed")
+		else:
+			new_input.combat_actions.append("heavy_attack_pressed")
 	
 	
 	return new_input

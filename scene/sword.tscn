@@ -6,7 +6,7 @@
 radius = 0.13916016
 height = 1.7193604
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1103837540]
+[node name="CharacterBody3D" type="Area3D" unique_id=1015062770]
 script = ExtResource("1_xhjsy")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1804837846]

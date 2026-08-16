@@ -8,7 +8,7 @@ func _ready() -> void:
 	animation = "Sprint"
 
 
-func check_relevance(input : InputPackage):
+func default_lifecycle( input : InputPackage):
 	if not player.is_on_floor():
 		return "midair"
 	input.actions.sort_custom(moves_priority_sort)

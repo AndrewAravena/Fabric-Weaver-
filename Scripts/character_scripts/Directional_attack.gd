@@ -1,4 +1,4 @@
-extends combo
+extends Combo
 
 @export var root_move : Move
 @export var panic_click_block: float = 0.1 
