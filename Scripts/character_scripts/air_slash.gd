@@ -2,6 +2,8 @@ extends Move
 class_name  AirSlash1
 #Redifine your class_name
 #Redefine your overriden parameters 
+const ATTACK_DURA := 0.5
+const AIR_ATTACK_DECEL := 12.0
 
 const  ATTACK_DURATION := 0.5
 func _ready() -> void:
@@ -20,7 +22,10 @@ func default_lifecycle( input : InputPackage):
 	
 	# implement an update function
 func update(input : InputPackage, delta : float):
-	player.velocity.y = 0 
+	
+	player.velocity.y = 0
+	player.velocity.x = move_toward(player.velocity.x , 0 , AIR_ATTACK_DECEL * delta) 
+	player.velocity.z = move_toward(player.velocity.z , 0 , AIR_ATTACK_DECEL * delta) 
 	player.move_and_slide()
 	
 	# Delete comments if bothered c:

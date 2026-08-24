@@ -35,4 +35,7 @@ func gather_inputs() -> InputPackage:
 			new_input.combat_actions.append("heavy_attack_pressed")
 	
 	
+	if Input.is_action_just_pressed("roll"):
+		new_input.actions.append("dash")
+	
 	return new_input

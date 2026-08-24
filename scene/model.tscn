@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://c722aes2a034s" path="res://Scripts/character_scripts/ray_cast_3d.gd" id="7_o12be"]
 [ext_resource type="Script" uid="uid://cxqa614bl2m0n" path="res://Scripts/character_scripts/Moves/landing_run.gd" id="8_f2n7c"]
 [ext_resource type="Script" uid="uid://c1pr2i026ml6e" path="res://Scripts/character_scripts/Moves/landing_sprint.gd" id="9_e0s72"]
+[ext_resource type="Script" uid="uid://bipbwy3va4bkg" path="res://Scripts/character_scripts/dash.gd" id="9_nxg2x"]
 [ext_resource type="Script" uid="uid://dh5uyd113p4jd" path="res://Scripts/character_scripts/air_slash.gd" id="14_05wj5"]
 [ext_resource type="Script" uid="uid://b2g7122n3up41" path="res://Scripts/character_scripts/slash_1.gd" id="15_ynxpy"]
 [ext_resource type="Script" uid="uid://dv3vphqts0p58" path="res://Scripts/character_scripts/consecutive_attack.gd" id="16_4cvjh"]
@@ -5147,7 +5148,8 @@ script = ExtResource("3_f2n7c")
 [node name="run" type="Node" parent="states" unique_id=2127920463]
 script = ExtResource("4_e0s72")
 
-[node name="roll" type="Node" parent="states" unique_id=109812365]
+[node name="dash" type="Node" parent="states" unique_id=109812365]
+script = ExtResource("9_nxg2x")
 
 [node name="JumpRun" type="Node" parent="states" unique_id=1785134216]
 script = ExtResource("5_aqe7k")

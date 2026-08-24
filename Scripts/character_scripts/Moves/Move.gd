@@ -26,6 +26,8 @@ static var moves_priority : Dictionary = {
 	"slash_2" : 15,
 	"slash_3" :15,
 	"air_slash_1": 15,  
+	"dash": 12,
+	
 }
 
 
