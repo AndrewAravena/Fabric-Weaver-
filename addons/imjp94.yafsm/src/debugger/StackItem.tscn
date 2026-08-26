@@ -1,11 +1,3 @@
-[gd_scene format=3 uid="uid://b3b5ivtjmka6b"]
-
-[node name="StackItem" type="PanelContainer"]
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="."]
-offset_right = 36.0
-offset_bottom = 26.0
-text = "Item"
+version https://git-lfs.github.com/spec/v1
+oid sha256:131d8ae787c5aff991bd3ce4fb714fa3dd8d85a835f948b56e75928eecf648f2
+size 236

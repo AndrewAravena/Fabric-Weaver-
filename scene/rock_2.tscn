@@ -1,5 +1,3 @@
-[gd_scene format=3 uid="uid://cqc0j7go172iy"]
-
-[ext_resource type="PackedScene" uid="uid://d0k76a5i7n1t7" path="res://Assets/terrain/rock.glb" id="1_c23kh"]
-
-[node name="rock2" unique_id=1379499753 instance=ExtResource("1_c23kh")]
+version https://git-lfs.github.com/spec/v1
+oid sha256:eda84bf702dde27f98c7948f3eb3565fae49c27ef329b0a23fdf710b542499b0
+size 231

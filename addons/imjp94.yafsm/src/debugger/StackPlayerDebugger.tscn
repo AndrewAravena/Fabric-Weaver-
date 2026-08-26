@@ -1,27 +1,3 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://addons/imjp94.yafsm/src/debugger/StackPlayerDebugger.gd" type="Script" id=1]
-
-[node name="StackPlayerDebugger" type="Control"]
-modulate = Color( 1, 1, 1, 0.498039 )
-anchor_right = 1.0
-anchor_bottom = 1.0
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Stack" type="VBoxContainer" parent="MarginContainer"]
-margin_top = 600.0
-margin_bottom = 600.0
-mouse_filter = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
+version https://git-lfs.github.com/spec/v1
+oid sha256:303baff8717e949586038c5712a67000cd036599a67828ac10b64dfe24132812
+size 672

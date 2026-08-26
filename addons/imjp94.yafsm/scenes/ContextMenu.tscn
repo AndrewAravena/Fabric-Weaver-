@@ -1,12 +1,3 @@
-[gd_scene format=3 uid="uid://cflltb00e10be"]
-
-[node name="ContextMenu" type="PopupMenu"]
-size = Vector2i(104, 100)
-visible = true
-item_count = 3
-item_0/text = "Add State"
-item_0/id = 0
-item_1/text = "Add Entry"
-item_1/id = 1
-item_2/text = "Add Exit"
-item_2/id = 2
+version https://git-lfs.github.com/spec/v1
+oid sha256:5817673034ca3493d020052dac8d5bb9bb5eb202a9b721a898f025e29717858b
+size 265

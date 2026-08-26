@@ -1,5 +1,3 @@
-[gd_scene format=3 uid="uid://dxb1tr2yua8u6"]
-
-[ext_resource type="PackedScene" uid="uid://85rueg3cxsih" path="res://Assets/character/stupidcharacter.glb" id="1_5olrt"]
-
-[node name="stupidcharacter" unique_id=2099265539 instance=ExtResource("1_5olrt")]
+version https://git-lfs.github.com/spec/v1
+oid sha256:aec60132b6e888d5b32f649c512a0a7bdb5a718aea00b826ad918723cb148ac1
+size 253
