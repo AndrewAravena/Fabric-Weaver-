@@ -27,6 +27,7 @@ var current_move : Move
 	"slash_2": $states/slash_2 , 
 	"slash_3": $states/slash_3,
 	"staggered": $states/staggered,
+	"dash" : $states/dash,
 }
 
 
