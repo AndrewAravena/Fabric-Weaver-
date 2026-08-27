@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 	
 	model.update(input, delta)
 	
-	print(input.actions)
+	#print(input.actions)
 	
 	input.queue_free()
 	
