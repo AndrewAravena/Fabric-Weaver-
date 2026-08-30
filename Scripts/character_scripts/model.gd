@@ -11,7 +11,7 @@ class_name Player_Model
 @onready var active_weapon : Weapon = $rightWrist/socketweapon/sword as Sword
 
 var current_move : Move
-
+var previous_move_name : String = ""
 
 @onready var moves = {
 	"idle" : $states/idle,
@@ -48,6 +48,7 @@ func update(input : InputPackage, delta : float):
 
 func switch_to(state : String):
 	current_move.on_exit_state()
+	previous_move_name = current_move.move_name
 	current_move = moves[state]
 	current_move.on_enter_state()
 	current_move.mark_enter_state()

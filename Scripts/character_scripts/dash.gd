@@ -17,7 +17,7 @@ var dir_set : bool = false
 
 func _ready() -> void:
 	animation = "asasdasd"
-	move_name = "asas"
+	move_name = "dash"
 func on_enter_state():
 	was_airborne = not player.is_on_floor()
 	dir_set = false 
@@ -52,7 +52,7 @@ func update(input : InputPackage, delta : float):
 func apply_burst():
 	var speed = AIR_DASH_VEL if was_airborne else GROUND_DASH_VEL
 	player.velocity.x = dash_dir.x * speed
-	player.velocity.z = dash_dir.y * speed
+	player.velocity.z = dash_dir.z * speed
 	if not was_airborne:
 		player.velocity.y = 0
 		

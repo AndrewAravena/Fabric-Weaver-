@@ -3,6 +3,8 @@ class_name input_gatherer
 const HEAVY_CHARGE_THRESHOLD := 0.4
 var _heavy_press_time : float = -1.0
 
+const DASH_COOLDOWN := 0.6
+var last_dash_time : float = -0.0
 
 func gather_inputs() -> InputPackage:
 	var new_input = InputPackage.new()
@@ -36,6 +38,10 @@ func gather_inputs() -> InputPackage:
 	
 	
 	if Input.is_action_just_pressed("roll"):
-		new_input.actions.append("dash")
+		var now = Time.get_unix_time_from_system()
+		if now - Time.get_unix_time_from_system() >= DASH_COOLDOWN:
+			new_input.actions.append("dash")
+			last_dash_time = now
+		
 	
 	return new_input

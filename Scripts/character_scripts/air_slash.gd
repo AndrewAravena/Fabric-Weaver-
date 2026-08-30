@@ -12,6 +12,9 @@ func _ready() -> void:
 	
 func on_enter_state():
 	player.velocity.y = 0 
+	if player.model.previous_move_name == "dash":
+		player.velocity.x = 0 
+		player.velocity.z = 0 
 
 #Implement a chechk relevance function
 func default_lifecycle( input : InputPackage):
@@ -21,11 +24,10 @@ func default_lifecycle( input : InputPackage):
 	
 	
 	# implement an update function
-func update(input : InputPackage, delta : float):
-	
+func update(input : InputPackage, delta : float):	
+	player.velocity.y = 0
+	player.move_and_slide()
 	player.velocity.y = 0
 	player.velocity.x = move_toward(player.velocity.x , 0 , AIR_ATTACK_DECEL * delta) 
 	player.velocity.z = move_toward(player.velocity.z , 0 , AIR_ATTACK_DECEL * delta) 
-	player.move_and_slide()
-	
 	# Delete comments if bothered c:

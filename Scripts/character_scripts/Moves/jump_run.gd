@@ -4,7 +4,7 @@ class_name  JumpRun
 
 const VERTICAL_SPEED_ADDED: float = 5.0
 
-const TRANSITIONAL_TIMING:= 0.44
+const TRANSITIONAL_TIMING:= 0.33
 const JUMP_TIMING:= 0.1
 #Redefine your overriden parameters 
 
@@ -19,8 +19,14 @@ func default_lifecycle( input : InputPackage):
 	if works_longer_than(TRANSITIONAL_TIMING):
 		jumped = false 
 		return "midair"
-	else:
-		return "okay"
+	
+		
+	if not input.actions.is_empty():
+		input.actions.sort_custom(moves_priority_sort)
+		if input.actions[0] != move_name and moves_priority[input.actions[0]] > moves_priority[move_name] :
+			return input.actions[0]
+	return "okay"
+		
 	
 	
 	# implement an update function
